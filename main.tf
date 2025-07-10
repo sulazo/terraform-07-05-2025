@@ -15,7 +15,7 @@ resource "aws_instance" "linux_ec2" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
-      "echo 'Hello from Terraform' > /tmp/hello.txt"
+      "echo 'Hello from Terraform!' > /tmp/hello.txt"
     ]
 
     connection {
